@@ -2,6 +2,14 @@
 
 2. Budowa Systemu w Qsys
 a) dodawanie komponentów
+Component genereted IRQ settings:
+	Synchronusly capture			[checked]
+	Edge Type:							Rising
+	Enable bit-clearing for edge capture register [checked]
+	Generate IRQ	[checked]
+	IRQ Type			EDGE
+BSP Timer:
+	sys_clk_timer musi być ustawiony na timer0 lub timer1
 
 
 b)Połączenia w generowanym systemi:
@@ -169,5 +177,12 @@ int alt_ic_irq_disable(alt_u32 ic_id, alt_u32 irq);
 
 	  ic_id			- kontoler przerwania
 	  irq				- numer przerwania
+	  
+	  
+	  
+---------------------------------Licznik-------------------------------------------
+alt_timestamp_start()				return 0 - OK
+alt_timestamp()						zwraca stan licznika
+alt_u32 alt_timestamp_freq()	zwaraca częstotliwość w Hz
 
 	
